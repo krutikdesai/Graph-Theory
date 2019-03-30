@@ -21,7 +21,7 @@ class Graph{
         void udirGraph(vector<Edge>);
         void dirGraph(vector<Edge>);
         void printGraph();
-        void DFS(int);
+        void DFS(int,int);
         void BFS(int);
 
 };
@@ -62,18 +62,20 @@ void Graph::printGraph(){
     }
 }
 
-void Graph::DFS(int start){
+void Graph::DFS(int start,int flag = 1){
+    if(flag) {parent.clear();}
     cout << start << " ";
     parent.emplace(start,NULL);
     for(auto x : adjList[start]){
         if(parent.find(x.first) == parent.end()){
             parent.emplace(x.first,start);
-            DFS(x.first);
+            DFS(x.first,0);
         }
     }
 }
 
 void Graph::BFS(int start){
+    parent.clear();
     unordered_map<int,int> height;
     height.emplace(start,0);
     parent.emplace(start,NULL);
