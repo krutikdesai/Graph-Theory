@@ -1,4 +1,4 @@
-Some header and source file for a graph theory project.
+Header and source files for graph algorithms in C++.
 
 -Header file includes methods to setup adjacency lists for directed/undirected graphs with weights (Weights are initialized as 0 
  for unweighted graphs).
