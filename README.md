@@ -7,4 +7,4 @@ Header and source files for graph algorithms in C++.
 
 -A source file implementing Topological Sort.
 
--A source file implementing Ford Fulkerson's algorithm.(Work in progress)
+-A source file implementing Ford Fulkerson's algorithm.
